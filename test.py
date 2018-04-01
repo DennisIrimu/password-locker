@@ -24,13 +24,17 @@ class TestCredentials(unittest.TestCase):
 
     def test_save_credentials(self):
         '''
-        test to save contacts
+        save credentials
         '''
         self.new_credentials.save_credentials()
 
         self.assertEqual(len(Credentials.contact_list),1)
 
-
+    def test_credentials_display(self):
+        '''
+        Show saved Credentials
+        '''
+        self.assertEqual(Credentials.display_credentials(),Credentials.contact_list)
 
 
 

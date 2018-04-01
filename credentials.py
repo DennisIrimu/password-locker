@@ -20,3 +20,9 @@ class Credentials:
         '''
 
         Credentials.contact_list.append(self)
+    @classmethod
+    def display_credentials(cls):
+        '''
+        returns Credentials
+        '''
+        return cls.contact_list
