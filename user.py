@@ -1,4 +1,6 @@
+import random
 from credentials import credentials
+
 def create_credentials(fname,lname,phone,email):
     '''
     Create new User
@@ -63,4 +65,4 @@ def user():
                     print("No accounts yet")
                     print ('\n')
 
-            
+            elif initials == 'pg':
