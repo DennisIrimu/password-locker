@@ -10,4 +10,10 @@ def save_credentials(credentials):
     saves credentials
     '''
     credentials.save_credentials()
+
+def display_credentials(credentials):
+    '''
+    displays user Credentials
+    '''
+    return Credentials.display_credentials()
     
