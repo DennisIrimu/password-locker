@@ -77,4 +77,8 @@ def user():
                 print("Thank you, come again soon")
                 break
 
-            
+            else:
+                print("Please use required inputs")
+
+if __name__ == '__main__':
+    main()
