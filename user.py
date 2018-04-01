@@ -66,3 +66,10 @@ def user():
                     print ('\n')
 
             elif initials == 'pg':
+
+                random_password = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ?()@#$%^&*!"
+                passlen = 8
+                sample_password = "".join(random.sample(random_password,passlen ))
+                print(f"generated password is{sample_password})
+
+            
