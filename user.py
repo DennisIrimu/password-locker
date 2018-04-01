@@ -1,17 +1,13 @@
-class User:
+from credentials import credentials
+def create_credentials(fname,lname,phone,email):
     '''
-    Generates new instances of contacts
+    Create new User
     '''
-
-    contact_list = []
-    def __init__(self,first_name,last_name,number,email):
-        '''
-        Create new instances of class User
-        '''
-
-        self.first_name = first_name
-        self.last_name = last_name
-        self.number = number
-        self.email = email
-
+    new_user = Credentials(fname,lname,phone,email)
+    return new_contact
+def save_credentials(credentials):
+    '''
+    saves credentials
+    '''
+    credentials.save_credentials()
     
