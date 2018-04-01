@@ -56,4 +56,11 @@ def user():
                 print(f"Here are your currently saved credentials Mrs/Madam {f_name} {l_name}")
                 print('\n')
                 for credentials in display_credentials():
-                    print(f"{credentials.first_name} {credentials.last_name}...{})
+                    print(f"{credentials.first_name} {credentials.last_name}...{credentials.number}")
+                    print('\n')
+                else:
+                    print('\n')
+                    print("No accounts yet")
+                    print ('\n')
+
+            
