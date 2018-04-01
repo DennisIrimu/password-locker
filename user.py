@@ -1,25 +1,26 @@
 import random
-from credentials import credentials
+from credentials import Credentials
 
 def create_credentials(fname,lname,phone,email):
     '''
     Create new User
     '''
     new_user = Credentials(fname,lname,phone,email)
-    return new_contact
+    return new_user
+
 def save_credentials(credentials):
     '''
     saves credentials
     '''
     credentials.save_credentials()
 
-def display_credentials(credentials):
+def display_credentials():
     '''
     displays user Credentials
     '''
     return Credentials.display_credentials()
 
-def user():
+def main():
     print("We're here to save your credentials and as a bonus we even help with password generation.")
 
     user_name = input()
@@ -39,7 +40,7 @@ def user():
             f_name = input()
 
             print("Enter your last name")
-            f_name = input()
+            l_name = input()
 
             print("Enter your mobile phone number")
             p_number = input()
@@ -52,32 +53,37 @@ def user():
             print ('\n')
             print(f"New Account {f_name}{l_name} is saved")
 
+
         elif initials == 'display':
 
             if display_credentials():
-                print(f"Here are your currently saved credentials Mrs/Madam {f_name} {l_name}")
+                print("Here are your currently saved credentials.")
                 print('\n')
                 for credentials in display_credentials():
                     print(f"{credentials.first_name} {credentials.last_name}...{credentials.number}")
                     print('\n')
                 else:
                     print('\n')
-                    print("No accounts yet")
+                    print("No more accounts")
                     print ('\n')
 
-            elif initials == 'pg':
+        elif initials == 'pg':
 
-                random_password = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ?()@#$%^&*!"
-                passlen = 8
-                sample_password = "".join(random.sample(random_password,passlen ))
-                print(f"generated password is{sample_password})
+                choices = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ?()@#$%^&*!"
+                length = len(choices)
+                print("Give the length to your password")
+                lent = int(input())
+                password = "".join(random.sample(choices,lent ))
+                print ('\n')
 
-            elif initials == 'exit':
+                print(password)
+
+        elif initials == 'exit':
 
                 print("Thank you, come again soon")
                 break
 
-            else:
+        else:
                 print("Please use required inputs")
 
 if __name__ == '__main__':
