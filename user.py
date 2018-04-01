@@ -72,4 +72,9 @@ def user():
                 sample_password = "".join(random.sample(random_password,passlen ))
                 print(f"generated password is{sample_password})
 
+            elif initials == 'exit':
+
+                print("Thank you, come again soon")
+                break
+
             
