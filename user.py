@@ -68,7 +68,9 @@ def main():
                     print ('\n')
 
         elif initials == 'pg':
-
+            print("input username")
+            username = input()
+            if username == f_name:
                 choices = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ?()@#$%^&*!"
                 length = len(choices)
                 print("Give the length to your password")
@@ -77,6 +79,8 @@ def main():
                 print ('\n')
 
                 print(password)
+            else:
+                print("IMPOSTOR ALERT")
 
         elif initials == 'exit':
 
