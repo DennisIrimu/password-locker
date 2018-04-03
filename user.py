@@ -21,7 +21,7 @@ def display_credentials():
     return Credentials.display_credentials()
 
 def main():
-    print("We're here to save your credentials and as a bonus we even help with password generation.")
+    print("We're here to save your credentials and as a bonus we even help with password generation.Input your name")
 
     user_name = input()
 
@@ -57,7 +57,7 @@ def main():
         elif initials == 'display':
 
             if display_credentials():
-                print("Here are your currently saved credentials.")
+                print("Here are your currently saved accounts.")
                 print('\n')
                 for credentials in display_credentials():
                     print(f"{credentials.first_name} {credentials.last_name}...{credentials.number}")
